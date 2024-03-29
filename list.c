@@ -31,13 +31,15 @@ Node * createNode(void * data) {
 List * createList() {
   List * list = (List *)malloc(sizeof(List));
   if (list == NULL) exit(EXIT_FAILURE);
+  
   list->head = NULL;
   list->tail = NULL;
+  
   return list;
 }
 
 void * firstList(List * list) {
-  if (list == NULL) return NULL;
+  if (list->head == NULL) return NULL;
   list->current = list->head;
   return list->head;
 }
