@@ -201,3 +201,14 @@ Fri 29 Mar 2024 02:49:49 PM UTC:
  tests:  6|4
 total_score: 25/70
 6bcd32e
+Fri 29 Mar 2024 02:51:19 PM UTC: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:66:9: error: ‘List’ {aka ‘struct List’} has no member named ‘Current’; did you mean ‘current’?
+   66 |   list->Current = list->current->prev;
+      |         ^~~~~~~
+      |         current
+Compilation failed
+2256db0
