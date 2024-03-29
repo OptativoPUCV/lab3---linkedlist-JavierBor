@@ -275,3 +275,20 @@ Fri 29 Mar 2024 03:08:34 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 499bc76
+Fri 29 Mar 2024 03:13:11 PM UTC: 
+ list.c | 18 ++++++++++++++++--
+ 1 file changed, 16 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:114:8: error: variable or field ‘dato’ declared void
+  114 |   void dato = aux->data;
+      |        ^~~~
+list.c:114:15: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  114 |   void dato = aux->data;
+      |               ^~~
+list.c:130:10: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+  130 |   return dato;
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+42a3959
