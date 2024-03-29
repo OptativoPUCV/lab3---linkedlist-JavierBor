@@ -20,3 +20,19 @@ Fri 29 Mar 2024 02:20:23 PM UTC:
  tests:  1|5
 total_score: 10/70
 ad901c3
+Fri 29 Mar 2024 02:22:24 PM UTC: 
+ list.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:44:11: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   44 |   if (list->next != NULL){
+      |           ^~
+list.c:45:25: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   45 |     list->current = list->next;
+      |                         ^~
+list.c:46:16: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   46 |     return list->next;
+      |                ^~
+Compilation failed
+2603800
