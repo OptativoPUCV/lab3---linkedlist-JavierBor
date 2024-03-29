@@ -242,3 +242,20 @@ Fri 29 Mar 2024 03:06:03 PM UTC:
  tests:  11|1
 total_score: 55/70
 aa884b7
+Fri 29 Mar 2024 03:08:22 PM UTC: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:115:9: error: ‘List’ {aka ‘struct List’} has no member named ‘currente’; did you mean ‘current’?
+  115 |   list->currente->prev->next = list->current->next;
+      |         ^~~~~~~~
+      |         current
+list.c:116:29: error: expected ‘;’ before ‘}’ token
+  116 |   return list->current->data
+      |                             ^
+      |                             ;
+  117 | }
+      | ~                            
+Compilation failed
+98511c8
